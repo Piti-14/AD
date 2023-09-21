@@ -4,17 +4,17 @@ import java.io.File
 
 class FitxerImatge(fEnt: File) {
 
-    var f: File = File("")   // No modifiqueu aquesta línia. El seu valor s'ha de modificar en el constructor
+    private var f: File = File("")   // No modifiqueu aquesta línia. El seu valor s'ha de modificar en el constructor
 
     init {
         // Constructor
         // Control d'existència del fitxer i control de l'extensió .bmp (traure missatges d'error)
         // En cas que tot siga correcte, inicialitzar f amb fEnt
-        if (fEnt.exists() && fEnt.extension = "bmp") {
+        /*if ((fEnt.exists()) && (fEnt.extension = "bmp")) {
             f = fEnt
         } else {
             println("The file doesn't exists or is not a .bmp image")
-        }
+        }*/
     }
 
     fun transformaNegatiu() {

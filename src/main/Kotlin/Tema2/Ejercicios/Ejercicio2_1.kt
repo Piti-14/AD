@@ -3,7 +3,7 @@ package Tema2.Ejercicios
 import java.io.File
 
 fun main(args: Array<String>){
-    val f = File("Penyagolosa.bmp")
+    var f = File("Penyagolosa.bmp")
 
     val fi = FitxerImatge(f)
     fi.transformaNegatiu()
