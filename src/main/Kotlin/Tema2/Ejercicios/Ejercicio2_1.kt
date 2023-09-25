@@ -9,5 +9,5 @@ fun main(args: Array<String>){
     fi.transformaNegatiu()
     fi.transformaObscur()
     //voluntari
-    //fi.transformaBlancNegre()
+    fi.transformaBlancNegre()
 }
