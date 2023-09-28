@@ -46,9 +46,9 @@ class Screen : JFrame() {
             var buffer = ByteArray(100)
             var bytes = f.read(buffer)
 
-            while (bytes != END) {
+           /* while (bytes != END) {
                 print()
-            }
+            }*/
         }
 
         save.addActionListener {

@@ -5,10 +5,9 @@ import java.io.FileInputStream
 
 fun main() {
     val f = DataInputStream(FileInputStream("Rutes.dat"))
-
     while (f.available() > 0) {
         var nom = f.readUTF()
-        println("Ruta: " + nom)
+        println("Ruta: $nom")
         println("Desnivell: " + f.readInt())
         println("Desnivell acumulat: " + f.readInt())
 
