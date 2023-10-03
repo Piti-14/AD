@@ -1,0 +1,2 @@
+Hola. Aquest ￃﾩs un text mￃﾩs llarg, per veure com gestiona els bytes amb un buffer de 30 carￃﾠcters.
+Com que ho llegim des d'un InputStream, els carￃﾠcters especials potser no isquen bￃﾩ.

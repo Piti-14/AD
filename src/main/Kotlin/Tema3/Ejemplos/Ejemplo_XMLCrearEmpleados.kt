@@ -1,7 +1,5 @@
 package Tema3.Ejemplos
 
-
-
 import java.io.ObjectInputStream
 import java.io.FileInputStream
 import javax.xml.parsers.DocumentBuilderFactory
@@ -14,7 +12,7 @@ import javax.xml.transform.OutputKeys
 fun main(args: Array<String>) {
     val f = ObjectInputStream(FileInputStream ("Empleats.obj"))
 
-    val doc = DocumentBuilderFactory.newInstance ().newDocumentBuilder().newDocument()
+    val doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument()
     val arrel = doc.createElement ("empleats")
     doc.appendChild(arrel)
 

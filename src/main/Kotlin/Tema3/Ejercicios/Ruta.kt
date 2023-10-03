@@ -39,5 +39,7 @@ class Ruta (var nom: String, var desnivell: Int, var desnivellAcumulat: Int, var
             ruta += "Punt " + i + ": " + getPuntNom(p) + " (" + getPuntLatitud(p) + ", " + getPuntLongitud(p) + ")\n"
             i++
         }
+
+        println(ruta)
     }
 }

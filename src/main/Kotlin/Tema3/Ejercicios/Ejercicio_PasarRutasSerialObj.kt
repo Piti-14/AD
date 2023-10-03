@@ -2,10 +2,12 @@ package Tema3.Ejercicios
 
 import java.io.DataInputStream
 import java.io.FileInputStream
+import java.io.FileOutputStream
+import java.io.ObjectOutputStream
 
 fun main() {
     val file = DataInputStream(FileInputStream("Rutes.dat"))
-
+    val obj = ObjectOutputStream(FileOutputStream("Rutes.obj"))
 
     while (file.available() > 0) {
         var nom = file.readUTF()
@@ -27,5 +29,7 @@ fun main() {
 
         var ruta = Ruta(nom, desnivell, desnivellAcumulat, llistaPunts)
         ruta.mostrarRuta()
+
+        obj.writeObject(ruta)
     }
 }

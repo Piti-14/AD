@@ -4,6 +4,8 @@ import Tema2.Ejemplos.END
 import javax.swing.*
 import java.awt.*
 import java.io.FileInputStream
+import java.io.FileOutputStream
+import java.io.OutputStreamWriter
 
 class Screen : JFrame() {
 
@@ -43,23 +45,37 @@ class Screen : JFrame() {
         open.addActionListener {
             // Instruccions per a volcar el contingut del fitxer en el JTextArea
             var f = FileInputStream(file.text)
-            var buffer = ByteArray(100)
+            var buffer = ByteArray(30)
             var bytes = f.read(buffer)
 
-           /* while (bytes != END) {
-                print()
-            }*/
+            var txt = ""
+
+            while (bytes != END) {
+                for (i in 0..< bytes) {
+                    txt += buffer[i].toChar()
+                }
+                bytes = f.read(buffer)
+            }
+            area.text = txt
+            f.close()
         }
 
         save.addActionListener {
             // Instruccions per a guardar el contingut del JTextArea al fitxer.
+            val f = OutputStreamWriter(FileOutputStream(file.text))
+            val txt = area.text
 
+            if (txt != null || txt != "") {
+                f.write(txt)
+            } else {
+                area.text = "ERROR! \nNOTHING TO WRITE. OPEN A FILE FIRST TO SAVE IT"
+            }
+            f.close()
         }
     }
 }
 
 private fun createShowWindow() {
-
     val frame = Screen()
     frame.isVisible = true
 }
